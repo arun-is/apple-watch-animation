@@ -44,6 +44,17 @@ body {
   position: relative;
 }
 
+a {
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.5;
+  }
+}
+
 .grid-item img:first-child {
   display: block;
   width: 100%;
@@ -61,20 +72,20 @@ body {
 .grid-item .overlay img {
   transform-origin: 0 0;
   transform: matrix3d(
-    0.240661,
-    -0.439741,
+    0.197006,
+    -0.422127,
     0,
-    -0.000531,
-    0.092197,
-    0.465588,
+    -0.000534,
+    0.007764,
+    0.399111,
     0,
-    -0.000234,
+    -0.00044,
     0,
     0,
     1,
     0,
-    120,
-    224,
+    135.1,
+    217.65,
     0,
     1
   );
