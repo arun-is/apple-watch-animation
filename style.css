@@ -13,6 +13,7 @@
 
   --100vw: 100vw;
   --currentWidth: tan(atan2(var(--100vw), 1px));
+
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   -webkit-font-smoothing: antialiased;
