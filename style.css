@@ -78,18 +78,12 @@ a {
   width: 100%;
 }
 
-.grid-item .overlay {
+.grid-item img:not(:first-child) {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0 auto auto 0;
   width: 720px;
   transform-origin: left top;
-  transform: scale(calc((var(--currentWidth) - 32) / 720));
-}
-
-.grid-item .overlay img {
-  transform-origin: 0 0;
-  transform: var(--watch-skew);
+  transform: scale(calc((var(--currentWidth) - 32) / 720)) var(--watch-skew);
 }
 
 @media (min-width: 752px) {
@@ -98,8 +92,9 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid-item .overlay {
-    transform: scale(calc((var(--currentWidth) - 48) / 720 / 2));
+  .grid-item img:not(:first-child) {
+    transform: scale(calc((var(--currentWidth) - 48) / 720 / 2))
+      var(--watch-skew);
   }
 }
 
@@ -109,14 +104,15 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid-item .overlay {
-    transform: scale(calc((var(--currentWidth) - 64) / 720 / 3));
+  .grid-item img:not(:first-child) {
+    transform: scale(calc((var(--currentWidth) - 64) / 720 / 3))
+      var(--watch-skew);
   }
 }
 
 @media (min-width: 2225px) {
   /* 720 * 3 + 4 * 16 */
-  .grid-item .overlay {
+  .grid-item img:not(:first-child) {
     transform: none;
   }
 }
