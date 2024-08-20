@@ -113,6 +113,6 @@ a {
 @media (min-width: 2225px) {
   /* 720 * 3 + 4 * 16 */
   .grid-item img:not(:first-child) {
-    transform: none;
+    transform: var(--watch-skew);
   }
 }
